@@ -186,11 +186,11 @@ form {
 
 /* Submit Button */
 .btn-signUp {
-  background: #ffffff;
-  color: var(--accent-color);
-  border: 1px solid #000000;
+  background:  var(--main-green);
+  color: white;
+  border: 1px solid var(--main-green);
   padding: 0.875rem 2rem;
-  border-radius: 0;
+  border-radius: 6;
   font-size: 0.9rem;
   font-weight: 400;
   white-space: nowrap;
@@ -204,9 +204,9 @@ form {
 .btn-signUp:hover {
   transform: translateY(-2px);
   box-shadow: none;
-  background: #ffffff;
-  border-color: #000000;
-  color: var(--accent-color);
+  background:  var(--main-green);
+  border-color: var(--main-green);
+  color: white;
 }
 
 .btn-signUp:active {

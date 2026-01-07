@@ -6,32 +6,23 @@
         alt="Logo"
         style="width: 70px; height: auto; margin-right: 10px"
       /> -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-         
-       
-          <button
-            class="btn nav-link-btn login-btn text-black"
-            (click)="navigateToLogin()"
-          >
+          <a routerLink="register" class="btn nav-link-btn login-btn text-white m-2" >
+            Sign Up
+          </a>
+          <a routerLink="login" class="btn nav-link-btn login-btn text-white m-2" >
             Login
-          </button>
-   
+          </a>
+
         </ul>
-        <div class="d-flex">
-         
-        </div>
+        <!-- <div class="d-flex">
+
+        </div> -->
       </div>
     </div>
   </div>

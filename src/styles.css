@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --main-green: #2BAE8D;
+  --main-red: #C54730;    
+  --light-green: #A1D8B5;
+  --dark-green: #2C3F33;
+  --main-grey: #EEEEEE;
+}
+
+/* Add padding to body to account for fixed navbar */
+body {
+  padding-top: 70px;
+}
+input{
+    background-color: var(--main-grey) !important;
+}

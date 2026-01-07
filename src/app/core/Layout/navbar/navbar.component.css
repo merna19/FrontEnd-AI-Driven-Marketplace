@@ -1,12 +1,12 @@
 /* CSS Variables for Modern Theme */
-:host {
+/* :host {
   --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --accent-color: #667eea;
-  --accent-hover: #5568d3;
+  --main-green: #5568d3;
   --text-primary: #1a202c;
   --text-secondary: #4a5568;
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Navbar Base Styles */
 .navbar {
@@ -18,12 +18,12 @@
   width: 100%;
   z-index: 1000;
   transition: all 0.3s ease;
-  padding: 0.75rem 1rem;
+  padding: 6px;
 }
 
 .navbar-brand {
   font-weight: 700;
-  color: var(--accent-color) !important;
+  color: var(--main-green) !important;
   font-size: 1.5rem;
   letter-spacing: -0.5px;
   transition: all 0.2s ease;
@@ -31,7 +31,7 @@
 
 .navbar-brand:hover {
   transform: scale(1.05);
-  color: var(--accent-color) !important;
+  color: var(--main-green) !important;
 }
 
 /* Nav Links */
@@ -45,22 +45,22 @@
 }
 
 .navbar .navbar-nav .nav-link:hover {
-  color: var(--accent-color);
+  color: var(--main-green);
   background: rgba(102, 126, 234, 0.05);
   transform: translateY(-1px);
 }
 
 .navbar .navbar-nav .nav-link.active {
-  color: var(--accent-color);
+  color: var(--main-green);
   font-weight: 600;
   background: rgba(102, 126, 234, 0.1);
 }
 
 /* Button Styling */
 .nav-link-btn {
-  background: var(--accent-color);
+  background: var(--main-green);
   color: #ffffff;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--main-green);
   border-radius: 10px;
   padding: 0.5rem 1.5rem;
   font-weight: 600;
@@ -72,8 +72,8 @@
 }
 
 .nav-link-btn:hover {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
+  background: var(--main-green);
+  border-color: var(--main-green);
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
@@ -83,21 +83,26 @@
   white-space: nowrap;
   font-weight: 400;
   padding: 0.5rem 1rem;
-  border-radius: 0;
+  border-radius: 6px;
   box-shadow: none;
   transition: all 0.2s ease;
-  background: #ffffff;
-  color: var(--accent-color);
-  border: 1px solid #000000;
+  background:var(--main-green) ;
+  border-color: var(--main-green);
+  outline: none;
+  box-shadow: none;
+  color: #ffffff;
+  /* border: 1px solid #000000; */
   font-size: 0.9rem;
 }
 
 .login-btn:hover {
   transform: translateY(-2px);
   box-shadow: none;
-  background: #ffffff;
-  border-color: #000000;
-  color: var(--accent-color);
+  outline: none;
+  border-color: var(--main-green);
+  background: var(--main-green);
+  color: #ffffff;
+  
 }
 
 /* Icons */
@@ -109,19 +114,19 @@
 }
 
 .navbar .icons i:hover {
-  color: var(--accent-color);
+  color: var(--main-green);
   transform: scale(1.15);
 }
 
 .nav-link.active {
-  color: var(--accent-color) !important;
+  color: var(--main-green) !important;
   background: rgba(102, 126, 234, 0.1);
 }
 
 .nav-link.position-relative .badge {
   font-size: 0.65rem;
   padding: 0.25em 0.5em;
-  background: var(--accent-color);
+  background: var(--main-green);
   color: #ffffff;
 }
 
@@ -134,7 +139,7 @@
 }
 
 .navbar.scrolled .navbar-brand {
-  color: var(--accent-color) !important;
+  color: var(--main-green) !important;
 }
 
 .navbar.scrolled .navbar-nav .nav-link {
@@ -142,38 +147,38 @@
 }
 
 .navbar.scrolled .navbar-nav .nav-link:hover {
-  color: var(--accent-color) !important;
+  color: var(--main-green) !important;
   background: rgba(102, 126, 234, 0.05);
 }
 
 .navbar.scrolled .navbar-nav .nav-link.active {
-  color: var(--accent-color) !important;
+  color: var(--main-green) !important;
   background: rgba(102, 126, 234, 0.1);
   font-weight: 600;
 }
 
 .navbar.scrolled .nav-link-btn {
-  background: var(--accent-color);
+  background: var(--main-green);
   color: #ffffff;
-  border-color: var(--accent-color);
+  border-color: var(--main-green);
 }
 
 .navbar.scrolled .nav-link-btn:hover {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
+  background: var(--main-green);
+  border-color: var(--main-green);
   color: #ffffff;
 }
 
 .navbar.scrolled .login-btn {
-  background: transparent;
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  background: var(--main-green);
+  color: #ffffff;
+  border-color: var(--main-green);
 }
 
 .navbar.scrolled .login-btn:hover {
-  background: var(--accent-color);
+  background: var(--main-green);
   color: #ffffff;
-  border-color: var(--accent-color);
+  border-color: var(--main-green);
 }
 
 .navbar.scrolled .icons i {
@@ -181,20 +186,20 @@
 }
 
 .navbar.scrolled .icons i:hover {
-  color: var(--accent-color);
+  color: var(--main-green);
 }
 
 /* Navbar Toggler */
 .navbar-toggler {
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--main-green);
   padding: 0.5rem;
   border-radius: 8px;
   transition: all 0.2s ease;
 }
 
 .navbar-toggler:hover {
-  background: rgba(102, 126, 234, 0.05);
-  border-color: var(--accent-color);
+  /* background: rgba(102, 126, 234, 0.05); */
+  border-color: var(--main-green);
 }
 
 .navbar-toggler:focus {
@@ -203,11 +208,11 @@
 }
 
 .navbar.scrolled .navbar-toggler {
-  border-color: var(--accent-color);
+  border-color: var(--main-green);
 }
 
 .navbar.scrolled .navbar-toggler:hover {
-  background: rgba(102, 126, 234, 0.05);
+  /* background: rgba(102, 126, 234, 0.05); */
 }
 
 /* Responsive Styles */
@@ -226,12 +231,12 @@
   }
 
   .navbar .navbar-nav .nav-link:hover {
-    color: var(--accent-color);
+    color: var(--main-green);
     background: rgba(102, 126, 234, 0.05);
   }
 
   .navbar .navbar-nav .nav-link.active {
-    color: var(--accent-color);
+    color: var(--main-green);
     background: rgba(102, 126, 234, 0.1);
   }
 

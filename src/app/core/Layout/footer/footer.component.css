@@ -1,8 +1,8 @@
 /* CSS Variables for Modern Theme */
 :host {
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --accent-color: #667eea;
-  --accent-hover: #5568d3;
+  --primary-gradient: linear-gradient(135deg, #2BAE8D 0%, #2C3F33 100%);
+  --accent-color: #2BAE8D;
+  --accent-hover: #A1D8B5;
   --text-primary: #1a202c;
   --text-secondary: #4a5568;
 }
@@ -67,9 +67,9 @@ footer ul li {
 
 /* Button Styles */
 .btn {
-  background: #ffffff;
-  color: var(--accent-color);
-  border: 2px solid #ffffff;
+  background: var(--main-green);
+  color: #ffffff;
+  border: 2px solid var(--main-green);
   padding: 0.625rem 1.5rem;
   border-radius: 10px;
   transition: all 0.2s ease;
@@ -79,9 +79,9 @@ footer ul li {
 }
 
 .btn:hover {
-  background: transparent;
+  background: var(--light-green);
   color: #ffffff;
-  border-color: #ffffff;
+  border-color: var(--light-green);
   cursor: pointer;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);

@@ -183,11 +183,11 @@ form {
 
 /* Submit Button */
 .btn-signUp {
-  background: #ffffff;
-  color: var(--accent-color);
-  border: 1px solid #000000;
+  background: var(--main-green);
+  color: #ffffff;
+  border: 1px solid var(--main-green);
   padding: 0.875rem 2rem;
-  border-radius: 0;
+  border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 400px;
   white-space: nowrap;
@@ -201,9 +201,9 @@ form {
 .btn-signUp:hover {
   transform: translateY(-2px);
   box-shadow: none;
-  background: #ffffff;
-  border-color: #000000;
-  color: var(--accent-color);
+  background: var(--main-green);
+  border-color: var(--main-green);
+  color: #ffffff;
 }
 
 .btn-signUp:active {
@@ -235,6 +235,10 @@ form {
   text-decoration: underline;
 }
 
+.bg-grey {
+  background-color: var(--main-grey) !important;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .container-fluid {
@@ -256,6 +260,8 @@ form {
   }
 
   .btn-signUp {
+    background-color: var(--main-green) !important;
+    color: white !important;
     padding: 0.7rem 1.2rem;
     font-size: 0.95rem;
   }

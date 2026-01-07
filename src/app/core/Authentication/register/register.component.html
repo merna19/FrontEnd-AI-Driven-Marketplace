@@ -1,0 +1,115 @@
+
+<div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center py-4">
+  <div style="max-width: 800px; width: 100%;">
+    <h2 class="text-center mb-4 fw-bold mt-5">SIGN UP INTO YOUR ACCOUNT</h2>
+
+      <form [formGroup]="registerForm" (ngSubmit)="register()" class="row g-3">
+        <!-- Name Fields -->
+        <div class="col-md-6">
+          @let firstNameControl = registerForm.get('firstName');
+          <label class="form-label fw-light" style="font-weight: 400 !important; font-size: 1.25rem;">First Name</label>
+          <input formControlName="firstName" type="text" class="form-control" placeholder="Enter first name">
+          @if(firstNameControl?.errors && firstNameControl?.touched){
+            <small class="text-danger">First name is required</small>
+          }
+        </div>
+
+        <div class="col-md-6">
+          @let lastNameControl = registerForm.get('lastName');
+          <label class="form-label fw-light" style="font-weight: 400 !important; font-size: 1.25rem;">Last Name</label>
+          <input formControlName="lastName" type="text" class="form-control" placeholder="Enter last name">
+          @if(lastNameControl?.errors && lastNameControl?.touched){
+            <small class="text-danger">Last name is required</small>
+          }
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="col-md-6">
+          @let emailControl = registerForm.get('email');
+          <label class="form-label fw-light" style="font-weight: 400 !important; font-size: 1.25rem;">Email Address</label>
+          <input formControlName="email" type="email" class="form-control" placeholder="Enter email address">
+          @if(emailControl?.errors && emailControl?.touched){
+            <small class="text-danger">
+              @if(emailControl?.getError('required')){Email is required}
+              @else if(emailControl?.getError('email')){Invalid email format}
+            </small>
+          }
+        </div>
+
+        <div class="col-md-6">
+          @let mobileControl = registerForm.get('mobileNumber');
+          <label class="form-label fw-light" style="font-weight: 400 !important; font-size: 1.25rem;">Mobile Number</label>
+          <input formControlName="mobileNumber" type="tel" class="form-control" placeholder="Enter mobile number">
+          @if(mobileControl?.errors && mobileControl?.touched){
+            <small class="text-danger">Mobile number is required</small>
+          }
+        </div>
+
+        <!-- Password Fields -->
+        <div class="col-md-6">
+          @let passwordControl = registerForm.get('password');
+          <label class="form-label fw-light" style="font-weight: 400 !important; font-size: 1.25rem;">Password</label>
+          <input formControlName="password" type="password" class="form-control" placeholder="Create password">
+          @if(passwordControl?.errors && passwordControl?.touched){
+            <small class="text-danger">Password is required</small>
+          }
+        </div>
+
+        <div class="col-md-6">
+          @let confirmPasswordControl = registerForm.get('confirmPassword');
+          <label class="form-label fw-light" style="font-weight: 400 !important; font-size: 1.25rem;">Confirm Password</label>
+          <input formControlName="confirmPassword" type="password" class="form-control" placeholder="Confirm password">
+          @if(confirmPasswordControl?.touched && (confirmPasswordControl?.errors || registerForm.getError('passwordMismatch'))){
+            <small class="text-danger">
+              @if(confirmPasswordControl?.getError('required')){Please confirm password}
+              @else if(registerForm.getError('passwordMismatch')){Passwords do not match}
+            </small>
+          }
+        </div>
+
+        <!-- Personal Info -->
+        <div class="col-md-6">
+          @let companyNameControl = registerForm.get('companyName');
+          <label class="form-label fw-light" style="font-weight: 400 !important; font-size: 1.25rem;">Company Name</label>
+          <input formControlName="companyName" type="text" class="form-control" placeholder="Enter company name">
+          @if(companyNameControl?.errors && companyNameControl?.touched){
+            <small class="text-danger">Company Name is required</small>
+          }
+        </div>
+
+
+
+        <!-- Location -->
+        <div class="col-md-6">
+          @let countryControl = registerForm.get('country');
+          <label class="form-label fw-light" style="font-weight: 400 !important; font-size: 1.25rem;">Country</label>
+          <select formControlName="country" class="form-select">
+            <option value="">Select country</option>
+            <option value="egypt">Egypt</option>
+          </select>
+          @if(countryControl?.errors && countryControl?.touched){
+            <small class="text-danger">Please select a country</small>
+          }
+        </div>
+
+  
+
+        <!-- Terms and Submit -->
+        <!-- <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="termsCheck">
+            <label class="form-check-label small" for="termsCheck">
+              I agree to the <a href="#" class="text-decoration-none">Terms & Conditions</a> and <a href="#" class="text-decoration-none">Privacy Policy</a>
+            </label>
+          </div>
+        </div> -->
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-signUp w-100 py-3 fw-bold" style="font-weight: 400 !important; ">Create Account</button>
+        </div>
+
+        <div class="col-12 text-center">
+          <small class="text-muted">Already have an account? <a routerLink="login" class="text-decoration-none fw-semibold">Sign In</a></small>
+        </div>
+      </form>
+
